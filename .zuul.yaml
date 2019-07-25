@@ -49,6 +49,7 @@
       tsdb: cassandra
       api_lang: python
       persister_lang: python
+      tempest_test_regex: (?!.*\[.*\btimerange\b.*\])(^monasca_tempest_tests.tests.api)
 
 - job:
     name: monasca-tempest-java-cassandra
@@ -57,6 +58,7 @@
       tsdb: cassandra
       api_lang: python
       persister_lang: java
+      tempest_test_regex: (?!.*\[.*\btimerange\b.*\])(^monasca_tempest_tests.tests.api)
 
 - project:
     templates:
