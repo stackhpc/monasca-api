@@ -232,7 +232,7 @@ class TestRepoMetricsInfluxDB(base.BaseTestCase):
                            .format(start_timestamp=start_timestamp,
                                    end_timestamp=end_timestamp)
                            if timestamp else '')
-        mock_client.query.assert_called_once_with(expected_query)
+        mock_client.query.assert_called_once_with(expected_query, database=None)
 
     def test_list_dimension_values_with_timestamp(self):
         self.test_list_dimension_values(timestamp=True)
